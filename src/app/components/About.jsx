@@ -77,8 +77,11 @@ const About = () => {
             We specialize in <strong>custom platforms</strong>, business automation, ERP/CRM, SaaS products, and cloud-native systems — all crafted with future-ready architecture and user-focused design.
           </p>
 
-          <div className="bg-gray-900 p-6 rounded-lg shadow-md mb-6">
-            <h4 className="text-red-500 font-semibold mb-2">Licenses & Certifications:</h4>
+          <div className=" p-6 rounded-lg shadow-md mb-6"
+          style={{
+            background: 'linear-gradient(135deg,  #c07676ff, #fc2b2bff, #3c2626ff)',
+          }}>
+            <h4 className="text-black font-semibold mb-2">Licenses & Certifications:</h4>
             <ul className="list-disc list-inside text-sm text-gray-300 space-y-1">
               <li>MSME Registered</li>
               <li>GST Compliant</li>
@@ -92,7 +95,7 @@ const About = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => router.push('/contact')}
-            className="bg-red-600 hover:bg-red-700 transition-all text-white py-3 px-6 rounded-md mt-4 shadow-lg"
+            className="bg-red-600 hover:bg-red-700 transition-all text-white py-3 px-6 rounded-md mt-4 shadow-lg cursor-pointer"
           >
             Contact Us
           </motion.button>

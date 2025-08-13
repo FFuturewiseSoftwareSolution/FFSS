@@ -3,15 +3,17 @@
 import React, { useState } from 'react';
 import {
   Facebook,
-  Twitter,
+  Instagram,
   Linkedin,
   Github,
   ArrowUp
 } from 'lucide-react';
+import { FaXTwitter } from 'react-icons/fa6'; // ✅ X (Twitter) icon from react-icons
 
 const socialLinks = [
   { href: 'https://facebook.com', icon: Facebook },
-  { href: 'https://twitter.com', icon: Twitter },
+  { href: 'https://instagram.com', icon: Instagram }, // ✅ Added Instagram
+  { href: 'https://x.com', icon: FaXTwitter },        // ✅ Added X (Twitter)
   { href: 'https://linkedin.com', icon: Linkedin },
   { href: 'https://github.com', icon: Github }
 ];
@@ -26,7 +28,7 @@ const Footer = () => {
       style={{
         backgroundColor: '#0a0a0a',
         color: '#ccc',
-        padding: '2rem 1rem',
+        padding: '1.2rem 1rem',
         fontFamily: 'Poppins, sans-serif',
       }}
     >
