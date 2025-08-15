@@ -149,7 +149,7 @@ const Services = () => {
                   key={idx}
                   className="bg-red-700 text-white text-sm px-3 py-1 rounded-full"
                 >
-                  {tech}
+                  {/* {tech} */}
                 </span>
               ))}
             </div>
