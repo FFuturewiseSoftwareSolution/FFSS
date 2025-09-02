@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Head from "./components/Head";
+// import Head from "./components/Head";
 
 export default function Home() {
   return (

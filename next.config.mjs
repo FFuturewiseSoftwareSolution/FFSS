@@ -1,14 +1,18 @@
 /** @type {import('next').NextConfig} */
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+
 const nextConfig = {
-  output: 'export', // enables static HTML export
+  output: isGitHubPages ? 'export' : undefined,
   eslint: {
-    ignoreDuringBuilds: true // skip lint errors during build
+    ignoreDuringBuilds: true
   },
   images: {
-    unoptimized: true, // GitHub Pages doesn't support Next.js Image Optimization
+    unoptimized: isGitHubPages
   },
-  basePath: '/FFSS', // 👈 replace with your actual repo name
-  assetPrefix: '/FFSS/', // ensures assets load from the correct path
+  ...(isGitHubPages && {
+    basePath: '/FFSS',
+    assetPrefix: '/FFSS/'
+  })
 };
 
 export default nextConfig;
